@@ -1,0 +1,30 @@
+.quilt-block {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border: none;
+    overflow: hidden;
+    border: 0.25px dotted black;
+}
+
+.quilt-block-before,
+.quilt-block-after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: skew(45deg);
+    cursor: pointer;
+    border: 0.25px dotted black;
+}
+
+.quilt-block-before {
+    top: 0;
+    left: 0;
+    transform-origin: top;
+}
+
+.quilt-block-after {
+    bottom: 0;
+    right: 0;
+    transform-origin: bottom;
+}
