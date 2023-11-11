@@ -1,7 +1,9 @@
 .color-swatches {
     display: flex;
-    gap: 1rem;
+    /* gap: 1px; */
     padding: auto;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.114);
 }
 
 .color-swatch {
@@ -9,4 +11,5 @@
     height: 40px;
     /* border-radius: 50%; */
     cursor: pointer;
+
 }

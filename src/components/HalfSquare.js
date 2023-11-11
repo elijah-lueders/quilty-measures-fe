@@ -1,28 +1,29 @@
 import React, { useState } from 'react';
 import './QuiltBlock.css';
 
-function QuiltBlock() {
+function HalfSquare({ currentColor }) {
     const [topColor, setTopColor] = useState('white');
-    const [bottomColor, setBottomColor] = useState('blue');
+    const [bottomColor, setBottomColor] = useState('white');
+
 
     function handleTopClick(e) {
         if (e.shiftKey) {
-            setTopColor('red');
+            setTopColor('white');
         } else {
-            setTopColor(topColor === 'white' ? 'blue' : 'white');
+            setTopColor(topColor === currentColor ? 'white' : currentColor);
         }
     }
 
     function handleBottomClick(e) {
         if (e.shiftKey) {
-            setBottomColor('red');
+            setBottomColor('white');
         } else {
-            setBottomColor(bottomColor === 'white' ? 'blue' : 'white');
+            setBottomColor(bottomColor === currentColor ? 'white' : currentColor);
         }
     }
 
     return (
-        <div className="quilt-block">
+        <div className="half-square-block">
             <div
                 className="quilt-block-before"
                 style={{ backgroundColor: topColor }}
@@ -37,4 +38,4 @@ function QuiltBlock() {
     );
 }
 
-export default QuiltBlock;
+export default HalfSquare;
