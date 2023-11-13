@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import './QuiltBlock.css';
 
-function HalfSquare({ currentColor, currentDirection }) {
+function HalfSquare({ currentColor, currentDirection, mouseDown }) { // Add mouseDown as a prop
     const [topColor, setTopColor] = useState('white');
     const [bottomColor, setBottomColor] = useState('white');
-    const [direction, setDirection] = useState({currentDirection});
-    
+    const [direction, setDirection] = useState(currentDirection);
+    // Remove the local mouseDown state
 
     function handleTopClick(e) {
         if (e.shiftKey) {
             setDirection(direction === 'top-left' ? 'top-right' : 'top-left')
         } else {
-            setTopColor(topColor === currentColor ? 'white' : currentColor);
+            setTopColor( currentColor);
         }
     }
 
@@ -19,15 +19,29 @@ function HalfSquare({ currentColor, currentDirection }) {
         if (e.shiftKey) {
             setDirection(direction === 'top-left' ? 'top-right' : 'top-left')
         } else {
-            setBottomColor(bottomColor === currentColor ? 'white' : currentColor);
+            setBottomColor( currentColor);
         }
     }
+
+    function handleTopMouseOver(e) {
+        if (mouseDown) { // Use the mouseDown prop
+            handleTopClick(e);
+        }
+    }
+
+    function handleBottomMouseOver(e) {
+        if (mouseDown) { // Use the mouseDown prop
+            handleBottomClick(e);
+        }
+    }
+
     return (
         <div className={`half-square-triangle ${direction}`}>
             <div
                 className="quilt-block-top"
                 style={{ backgroundColor: topColor }}
-                onClick={handleTopClick}
+                onMouseDown={handleTopClick}
+                onMouseOver={handleTopMouseOver}
                 onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
                         handleTopClick(e);
@@ -38,7 +52,8 @@ function HalfSquare({ currentColor, currentDirection }) {
             <div
                 className="quilt-block-bottom"
                 style={{ backgroundColor: bottomColor }}
-                onClick={handleBottomClick}
+                onMouseDown={handleBottomClick}
+                onMouseOver={handleBottomMouseOver}
                 onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
                         handleBottomClick(e);

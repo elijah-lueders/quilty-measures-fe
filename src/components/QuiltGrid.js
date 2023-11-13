@@ -6,9 +6,10 @@ import FullSquare from './FullSquare';
 import HalfSquare from './HalfSquare';
 
 function QuiltGrid() {
-    const gridSize = 12;
-    const availableColors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'grey'];
+    const gridSize = 5;
+    const availableColors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'grey', 'white'];
     const [currentColor, setCurrentColor] = useState(availableColors[0]);
+    const [mouseDown, setMouseDown] = useState(false); // Add this line
 
     // Initialize the grid with default color
     const defaultGrid = Array(gridSize).fill().map(() => Array(gridSize).fill({ left: 'grey', right: 'white' }));
@@ -16,14 +17,17 @@ function QuiltGrid() {
 
     const handleBlockChange = (row, col, position) => {
         // Clone the grid to ensure immutability
-        const newGrid = [...grid];
+        const newGrid = [...grid]; 
         newGrid[row][col][position] = currentColor;
 
         setGrid(newGrid);
     };
 
     return (
-        <div className="quilt-grid-container">
+        <div className="quilt-grid-container"
+            onMouseDown={() => setMouseDown(true)}
+            onMouseUp={() => setMouseDown(false)}
+            onMouseLeave={() => setMouseDown(false)}>
             <ColorSwatches colors={availableColors} onColorSelect={setCurrentColor} />
 
             <div className="quilt-grid">
@@ -37,6 +41,7 @@ function QuiltGrid() {
                                 onChange={handleBlockChange}
                                 colors={block}
                                 currentColor={currentColor}
+                                mouseDown={mouseDown} // Add this line
                             />
                         ))}
                     </div>
