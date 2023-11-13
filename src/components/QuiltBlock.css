@@ -1,4 +1,13 @@
-.half-square-block {
+.quilt-block {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border: 0.25px solid black;
+    cursor: pointer;
+}
+
+.half-square-triangle {
     width: 100px;
     height: 100px;
     position: relative;
@@ -6,25 +15,30 @@
     border: 0.25px solid black;
 }
 
-.quilt-block-before,
-.quilt-block-after {
+.quilt-block-top,
+.quilt-block-bottom {
     position: absolute;
     width: 100%;
     height: 100%;
     transform-origin: bottom right;
-    transform: skew(-45deg);
     cursor: pointer;
     border: 0.25px solid black;
 }
 
-.quilt-block-before {
+.quilt-block-top {
     top: 0;
     left: 0;
     transform-origin: top;
 }
 
-.quilt-block-after {
+.quilt-block-bottom {
     bottom: 0;
     right: 0;
     transform-origin: bottom;
+}
+.top-left .quilt-block-top, .top-left .quilt-block-bottom {
+    transform: skew(-45deg);
+}
+.top-right .quilt-block-to, .top-right .quilt-block-bottom {
+    transform: skew(45deg);
 }

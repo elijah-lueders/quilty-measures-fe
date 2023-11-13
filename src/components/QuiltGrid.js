@@ -6,7 +6,7 @@ import FullSquare from './FullSquare';
 import HalfSquare from './HalfSquare';
 
 function QuiltGrid() {
-    const gridSize = 10;
+    const gridSize = 12;
     const availableColors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'grey'];
     const [currentColor, setCurrentColor] = useState(availableColors[0]);
 
