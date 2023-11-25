@@ -1,14 +1,17 @@
 .color-swatches {
     display: flex;
-    /* gap: 1px; */
+    /* stays at the top when scrolling */
+    position: sticky;
+    top: 0;
+    z-index: 99;
     padding: auto;
     justify-content: center;
     background-color: rgba(128, 128, 128, 0.114);
 }
 
 .color-swatch {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     /* border-radius: 50%; */
     cursor: pointer;
 
