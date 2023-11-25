@@ -10,9 +10,23 @@ function ColorSwatches({ colors, onColorSelect }) {
     };
     const handleKeyDown = (e) => {
         const number = parseInt(e.key);
+        // get the character code of the key pressed
+        const code = e.keyCode || e.which;
         if (number >= 1 && number <= colors.length) {
             setSelectedColor(colors[number - 1]);
             onColorSelect(colors[number - 1]);
+        }
+        // else if the code is for '-'
+        else if (code === 189) {
+            const index = colors.indexOf(selectedColor);
+            setSelectedColor(colors[(index + colors.length - 1) % colors.length]);
+            onColorSelect(colors[(index + colors.length - 1) % colors.length]);
+        }
+        // else if the code is for '='
+        else if (code === 187) {
+            const index = colors.indexOf(selectedColor);
+            setSelectedColor(colors[(index + 1) % colors.length]);
+            onColorSelect(colors[(index + 1) % colors.length]);
         }
     };
 
