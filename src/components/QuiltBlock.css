@@ -3,7 +3,14 @@
     height: 100px;
     position: relative;
     overflow: hidden;
-    border: 0.25px solid black;
+    border: .5px solid black;
+    cursor: pointer;
+}
+
+.full-square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
     cursor: pointer;
 }
 
@@ -12,33 +19,80 @@
     height: 100px;
     position: relative;
     overflow: hidden;
-    border: 0.25px solid black;
+    border: 1pt solid rgb(0, 0, 0)
 }
 
-.quilt-block-top,
-.quilt-block-bottom {
+.hst-top,
+.hst-bottom {
     position: absolute;
     width: 100%;
     height: 100%;
     transform-origin: bottom right;
     cursor: pointer;
-    border: 0.25px solid black;
+    /* border: 0.5px solid black; */
 }
 
-.quilt-block-top {
+.hst-top {
     top: 0;
     left: 0;
     transform-origin: top;
 }
 
-.quilt-block-bottom {
+.hst-bottom {
     bottom: 0;
     right: 0;
     transform-origin: bottom;
 }
-.top-left .quilt-block-top, .top-left .quilt-block-bottom {
+
+.top-left .hst-top,
+.top-left .hst-bottom {
     transform: skew(-45deg);
 }
-.top-right .quilt-block-to, .top-right .quilt-block-bottom {
+
+.top-right .hst-top,
+.top-right .hst-bottom {
     transform: skew(45deg);
+}
+
+.quarter-square-triangle {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    /* border: 5px solid rgb(240, 0, 0); */
+}
+
+.qst-top, .qst-right, .qst-bottom, .qst-left {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* transform-origin: bottom right; */
+    cursor: pointer;
+    /* border: 0.5px solid black; */
+}
+/* red */
+.qst-top {
+    /* display: none; */
+    transform: skew(45deg);
+    transform-origin: top;
+}
+/* orange */
+.qst-right {
+    /* display: none; */
+    transform: skewY(-45deg);
+    transform-origin: right;
+}
+/* yellow */
+.qst-bottom {
+    /* display: none; */
+    transform: skewX(45deg);
+    transform-origin: bottom;
+}
+/* green */
+.qst-left {
+    /* display: none; */
+    transform: rotate(45deg) translate(-50%, 50%);
+    transform-origin: center;
+    /* rotate 90 deg */
+    /* transform: rotate(-45deg); */
 }
