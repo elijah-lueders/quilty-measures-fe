@@ -1,11 +1,11 @@
-.quilt-block {
+/* .quilt-block {
     width: 100px;
     height: 100px;
     position: relative;
     overflow: hidden;
     border: .5px solid black;
     cursor: pointer;
-}
+} */
 
 .full-square {
     width: 100px;
@@ -18,7 +18,6 @@
     width: 100px;
     height: 100px;
     position: relative;
-    overflow: hidden;
     border: 1pt solid rgb(0, 0, 0)
 }
 
@@ -27,72 +26,56 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    transform-origin: bottom right;
     cursor: pointer;
     /* border: 0.5px solid black; */
 }
 
-.hst-top {
-    top: 0;
-    left: 0;
-    transform-origin: top;
+.top-left .hst-top {
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
 }
 
-.hst-bottom {
-    bottom: 0;
-    right: 0;
-    transform-origin: bottom;
-}
-
-.top-left .hst-top,
 .top-left .hst-bottom {
-    transform: skew(-45deg);
+    clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
 }
 
-.top-right .hst-top,
+.top-right .hst-top {
+    clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
+}
+
 .top-right .hst-bottom {
-    transform: skew(45deg);
+    clip-path: polygon(0% 100%, 0% 0%, 100% 100%);
 }
 
 .quarter-square-triangle {
     width: 100px;
     height: 100px;
     position: relative;
-    overflow: hidden;
+    cursor: pointer;
     /* border: 5px solid rgb(240, 0, 0); */
 }
 
-.qst-top, .qst-right, .qst-bottom, .qst-left {
+.qst-top,
+.qst-right,
+.qst-bottom,
+.qst-left {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* transform-origin: bottom right; */
-    cursor: pointer;
     /* border: 0.5px solid black; */
 }
-/* red */
+
 .qst-top {
-    /* display: none; */
-    transform: skew(45deg);
-    transform-origin: top;
+    clip-path: polygon(0% 0%, 50% 50%, 100% 0%);
 }
-/* orange */
+
 .qst-right {
-    /* display: none; */
-    transform: skewY(-45deg);
-    transform-origin: right;
+    clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
 }
-/* yellow */
+
 .qst-bottom {
-    /* display: none; */
-    transform: skewX(45deg);
-    transform-origin: bottom;
+    clip-path: polygon(100% 100%, 50% 50%, 0% 100%);
 }
-/* green */
+
 .qst-left {
-    /* display: none; */
-    transform: rotate(45deg) translate(-50%, 50%);
-    transform-origin: center;
-    /* rotate 90 deg */
-    /* transform: rotate(-45deg); */
+    clip-path: polygon(0% 100%, 50% 50%, 0% 0%);
 }
