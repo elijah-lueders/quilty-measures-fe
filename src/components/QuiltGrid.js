@@ -1,31 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ColorSwatches from './ColorSwatches';
 import './QuiltGrid.css'; // Import the CSS file
 import QuiltBlock from './QuiltBlock';
 
 function QuiltGrid() {
-    const [gridSize, setGridSize] = useState(2);
+    const [gridSize, setGridSize] = useState(8);
     const [availableColors, setAvailableColors] = useState(['black', 'white']);
     const [currentColor, setCurrentColor] = useState(availableColors[0]);
     const [mouseDown, setMouseDown] = useState(false);
-    const [colorInput, setColorInput] = useState(availableColors.join(', '));
+    const [colorInput, setColorInput] = useState(availableColors.join(' | '));
     const [quiltName, setFilename] = useState('quilt');
+    const [quilt, setQuilt] = useState(null);
 
-    const defaultGrid = Array(gridSize).fill().map(() => Array(gridSize).fill({ 'top': 'black', 'top-right': 'white', 'bottom-left': 'white', 'bottom-right': 'white' }));
-    const [grid, setGrid] = useState(defaultGrid);
+    const [grid, setGrid] = useState([]);
 
-    const handleBlockChange = (row, col, position) => {
+    useEffect(() => {
+        loadDefaultQuilt();
+    }, []);
+
+    const handleBlockChange = (row, col, newBlock) => {
         const newGrid = [...grid];
-        newGrid[row][col][position] = currentColor;
+        newGrid[row][col] = newBlock;
         setGrid(newGrid);
     };
 
     const updateColors = () => {
-        console.log(grid)
-        const newColors = colorInput.split(',').map(color => color.trim());
+        const newColors = colorInput.split(' |').map(color => color.trim());
         setAvailableColors(newColors);
-        setColorInput(newColors.join(', '));
-        
+        setColorInput(newColors.join(' | '));
     };
 
     const saveQuilt = () => {
@@ -33,10 +35,10 @@ function QuiltGrid() {
             id: Date.now(),
             gridSize,
             colors: availableColors,
-            quiltBlocks: grid
+            quiltBlocks: grid,
         };
         const json = JSON.stringify(quilt);
-        const blob = new Blob([json], {type: "application/json"});
+        const blob = new Blob([json], { type: "application/json" });
         const href = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = href;
@@ -46,10 +48,11 @@ function QuiltGrid() {
             setFilename(newFilename);
         } else {
             link.download = quiltName;
-        }        document.body.appendChild(link);
+        } document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
     };
+
 
     const loadQuilt = (event) => {
         const file = event.target.files[0];
@@ -60,8 +63,53 @@ function QuiltGrid() {
             setGridSize(quilt.gridSize);
             setAvailableColors(quilt.colors);
             setGrid(quilt.quiltBlocks);
+            setQuilt(quilt);
+            setColorInput(quilt.colors.join(' | '));
         };
         reader.readAsText(file);
+    };
+
+
+    async function loadDefaultQuilt() {
+        try {
+            const response = await fetch('/default_quilt.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            const quilt = await response.json();
+            setGridSize(quilt.gridSize);
+            setAvailableColors(quilt.colors);
+            setGrid(quilt.quiltBlocks);
+            setQuilt(quilt);
+            setColorInput(quilt.colors.join(' | '));
+        } catch (error) {
+            console.error('Error loading default quilt:', error);
+        }
+    }
+
+
+    // log all the state variables when click this button
+    const logState = () => {
+        console.log(`gridSize: ${gridSize}`);
+        console.log(`availableColors: ${availableColors}`);
+        console.log(`currentColor: ${currentColor}`);
+        console.log(`mouseDown: ${mouseDown}`);
+        console.log(`colorInput: ${colorInput}`);
+        console.log(`quiltName: ${quiltName}`);
+        console.log(`quilt: ${quilt}`);
+        // print all the blocks and their properties
+        console.log(`grid: ${grid}`);
+        grid.forEach((row, rowIndex) => {
+            row.forEach((block, colIndex) => {
+                console.log(`block[${rowIndex}][${colIndex}]: ${block}`);
+                console.log(`block[${rowIndex}][${colIndex}].type: ${block.type}`);
+                console.log(`block[${rowIndex}][${colIndex}].color: ${block.color}`);
+                console.log(`block[${rowIndex}][${colIndex}].topColor: ${block.topColor}`);
+                console.log(`block[${rowIndex}][${colIndex}].bottomColor: ${block.bottomColor}`);
+                console.log(`block[${rowIndex}][${colIndex}].direction: ${block.direction}`);
+            });
+        });
+
     };
 
 
@@ -72,26 +120,28 @@ function QuiltGrid() {
             onMouseLeave={() => setMouseDown(false)}>
             <ColorSwatches colors={availableColors} onColorSelect={setCurrentColor} />
 
-            <input value={colorInput} onChange={e => setColorInput(e.target.value)} placeholder="Enter colors, separated by commas" />
+            <input className='colors-input' value={colorInput} onChange={e => setColorInput(e.target.value)} placeholder="Enter colors, separated by commas" />
+            <br></br>
             <button onClick={updateColors}>Update Colors</button>
             <button onClick={saveQuilt}>Save Quilt</button>
             <input type="file" onChange={loadQuilt} />
 
             <div className="quilt-grid">
-                {grid.map((row, rowIndex) => (
+                {(quilt ? quilt.quiltBlocks : grid).map((row, rowIndex) => (
                     <div key={rowIndex} className="quilt-row">
                         {row.map((block, colIndex) => (
-                            <QuiltBlock 
-                                key={block.id} 
-                                block={block} 
-                                onChange={handleBlockChange}
+                            <QuiltBlock
+                                key={colIndex}
+                                block={block}
+                                onChange={(newBlock) => handleBlockChange(rowIndex, colIndex, newBlock)}
                                 mouseDown={mouseDown}
                                 currentColor={currentColor}
-                                />
+                            />
                         ))}
                     </div>
                 ))}
             </div>
+            <button onClick={logState}>Log State</button>
         </div>
     );
 }

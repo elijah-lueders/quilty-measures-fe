@@ -9,7 +9,6 @@
     display: flex;
 }
 
-
 .quilt-block:hover {
     cursor: pointer;
 }
@@ -29,4 +28,11 @@
 
 .current-color {
     border: 2px solid black;
+}
+
+.colors-input {
+    width: 70vw;
+    text-align: center;
+    border: none;
+    
 }
