@@ -1,0 +1,738 @@
+{
+    "id": 1700933537875,
+    "gridSize": 10,
+    "colors": [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "purple",
+        "black",
+        "white",
+        "cyan",
+        "magenta"
+    ],
+    "quiltBlocks": [
+        [
+            {
+                "id": 1701001,
+                "type": "half-square-triangle",
+                "topColor": "red",
+                "bottomColor": "orange",
+                "direction": "top-right"
+            },
+            {
+                "id": 1701002,
+                "type": "half-square-triangle",
+                "topColor": "orange",
+                "bottomColor": "yellow",
+                "direction": "top-left"
+            },
+            {
+                "id": 1701003,
+                "type": "half-square-triangle",
+                "topColor": "yellow",
+                "bottomColor": "green",
+                "direction": "top-right"
+            },
+            {
+                "id": 1701004,
+                "type": "half-square-triangle",
+                "topColor": "green",
+                "bottomColor": "blue",
+                "direction": "top-left"
+            },
+            {
+                "id": 1701005,
+                "type": "half-square-triangle",
+                "topColor": "blue",
+                "bottomColor": "purple",
+                "direction": "top-right"
+            },
+            {
+                "id": 1701006,
+                "type": "half-square-triangle",
+                "topColor": "purple",
+                "bottomColor": "black",
+                "direction": "top-left"
+            },
+            {
+                "id": 1701007,
+                "type": "half-square-triangle",
+                "topColor": "black",
+                "bottomColor": "white",
+                "direction": "top-right"
+            },
+            {
+                "id": 1701008,
+                "type": "half-square-triangle",
+                "topColor": "white",
+                "bottomColor": "cyan",
+                "direction": "top-left"
+            },
+            {
+                "id": 1701009,
+                "type": "half-square-triangle",
+                "topColor": "cyan",
+                "bottomColor": "magenta",
+                "direction": "top-right"
+            },
+            {
+                "id": 1701010,
+                "type": "half-square-triangle",
+                "topColor": "magenta",
+                "bottomColor": "red",
+                "direction": "top-left"
+            }
+        ],
+        [
+            {
+                "id": 1702001,
+                "type": "half-square-triangle",
+                "topColor": "red",
+                "bottomColor": "orange",
+                "direction": "top-right"
+            },
+            {
+                "id": 1702002,
+                "type": "half-square-triangle",
+                "topColor": "orange",
+                "bottomColor": "yellow",
+                "direction": "top-left"
+            },
+            {
+                "id": 1702003,
+                "type": "half-square-triangle",
+                "topColor": "yellow",
+                "bottomColor": "green",
+                "direction": "top-right"
+            },
+            {
+                "id": 1702004,
+                "type": "half-square-triangle",
+                "topColor": "green",
+                "bottomColor": "blue",
+                "direction": "top-left"
+            },
+            {
+                "id": 1702005,
+                "type": "half-square-triangle",
+                "topColor": "blue",
+                "bottomColor": "purple",
+                "direction": "top-right"
+            },
+            {
+                "id": 1702006,
+                "type": "half-square-triangle",
+                "topColor": "purple",
+                "bottomColor": "black",
+                "direction": "top-left"
+            },
+            {
+                "id": 1702007,
+                "type": "half-square-triangle",
+                "topColor": "black",
+                "bottomColor": "white",
+                "direction": "top-right"
+            },
+            {
+                "id": 1702008,
+                "type": "half-square-triangle",
+                "topColor": "white",
+                "bottomColor": "cyan",
+                "direction": "top-left"
+            },
+            {
+                "id": 1702009,
+                "type": "half-square-triangle",
+                "topColor": "cyan",
+                "bottomColor": "magenta",
+                "direction": "top-right"
+            },
+            {
+                "id": 1702010,
+                "type": "half-square-triangle",
+                "topColor": "magenta",
+                "bottomColor": "red",
+                "direction": "top-left"
+            }
+        ],
+        [
+            {
+                "id": 1703001,
+                "type": "half-square-triangle",
+                "topColor": "red",
+                "bottomColor": "orange",
+                "direction": "top-right"
+            },
+            {
+                "id": 1703002,
+                "type": "half-square-triangle",
+                "topColor": "orange",
+                "bottomColor": "yellow",
+                "direction": "top-left"
+            },
+            {
+                "id": 1703003,
+                "type": "half-square-triangle",
+                "topColor": "yellow",
+                "bottomColor": "green",
+                "direction": "top-right"
+            },
+            {
+                "id": 1703004,
+                "type": "half-square-triangle",
+                "topColor": "green",
+                "bottomColor": "blue",
+                "direction": "top-left"
+            },
+            {
+                "id": 1703005,
+                "type": "half-square-triangle",
+                "topColor": "blue",
+                "bottomColor": "purple",
+                "direction": "top-right"
+            },
+            {
+                "id": 1703006,
+                "type": "half-square-triangle",
+                "topColor": "purple",
+                "bottomColor": "black",
+                "direction": "top-left"
+            },
+            {
+                "id": 1703007,
+                "type": "half-square-triangle",
+                "topColor": "black",
+                "bottomColor": "white",
+                "direction": "top-right"
+            },
+            {
+                "id": 1703008,
+                "type": "half-square-triangle",
+                "topColor": "white",
+                "bottomColor": "cyan",
+                "direction": "top-left"
+            },
+            {
+                "id": 1703009,
+                "type": "half-square-triangle",
+                "topColor": "cyan",
+                "bottomColor": "magenta",
+                "direction": "top-right"
+            },
+            {
+                "id": 1703010,
+                "type": "half-square-triangle",
+                "topColor": "magenta",
+                "bottomColor": "red",
+                "direction": "top-left"
+            }
+        ],
+        [
+            {
+                "id": 1704001,
+                "type": "half-square-triangle",
+                "topColor": "red",
+                "bottomColor": "orange",
+                "direction": "top-right"
+            },
+            {
+                "id": 1704002,
+                "type": "half-square-triangle",
+                "topColor": "orange",
+                "bottomColor": "yellow",
+                "direction": "top-left"
+            },
+            {
+                "id": 1704003,
+                "type": "half-square-triangle",
+                "topColor": "yellow",
+                "bottomColor": "green",
+                "direction": "top-right"
+            },
+            {
+                "id": 1704004,
+                "type": "half-square-triangle",
+                "topColor": "green",
+                "bottomColor": "blue",
+                "direction": "top-left"
+            },
+            {
+                "id": 1704005,
+                "type": "half-square-triangle",
+                "topColor": "blue",
+                "bottomColor": "purple",
+                "direction": "top-right"
+            },
+            {
+                "id": 1704006,
+                "type": "half-square-triangle",
+                "topColor": "purple",
+                "bottomColor": "black",
+                "direction": "top-left"
+            },
+            {
+                "id": 1704007,
+                "type": "half-square-triangle",
+                "topColor": "black",
+                "bottomColor": "white",
+                "direction": "top-right"
+            },
+            {
+                "id": 1704008,
+                "type": "half-square-triangle",
+                "topColor": "white",
+                "bottomColor": "cyan",
+                "direction": "top-left"
+            },
+            {
+                "id": 1704009,
+                "type": "half-square-triangle",
+                "topColor": "cyan",
+                "bottomColor": "magenta",
+                "direction": "top-right"
+            },
+            {
+                "id": 1704010,
+                "type": "half-square-triangle",
+                "topColor": "magenta",
+                "bottomColor": "red",
+                "direction": "top-left"
+            }
+        ],
+        [
+            {
+                "id": 1705001,
+                "type": "half-square-triangle",
+                "topColor": "red",
+                "bottomColor": "orange",
+                "direction": "top-right"
+            },
+            {
+                "id": 1705002,
+                "type": "half-square-triangle",
+                "topColor": "orange",
+                "bottomColor": "yellow",
+                "direction": "top-left"
+            },
+            {
+                "id": 1705003,
+                "type": "half-square-triangle",
+                "topColor": "yellow",
+                "bottomColor": "green",
+                "direction": "top-right"
+            },
+            {
+                "id": 1705004,
+                "type": "half-square-triangle",
+                "topColor": "green",
+                "bottomColor": "blue",
+                "direction": "top-left"
+            },
+            {
+                "id": 1705005,
+                "type": "half-square-triangle",
+                "topColor": "blue",
+                "bottomColor": "purple",
+                "direction": "top-right"
+            },
+            {
+                "id": 1705006,
+                "type": "half-square-triangle",
+                "topColor": "purple",
+                "bottomColor": "black",
+                "direction": "top-left"
+            },
+            {
+                "id": 1705007,
+                "type": "half-square-triangle",
+                "topColor": "black",
+                "bottomColor": "white",
+                "direction": "top-right"
+            },
+            {
+                "id": 1705008,
+                "type": "half-square-triangle",
+                "topColor": "white",
+                "bottomColor": "cyan",
+                "direction": "top-left"
+            },
+            {
+                "id": 1705009,
+                "type": "half-square-triangle",
+                "topColor": "cyan",
+                "bottomColor": "magenta",
+                "direction": "top-right"
+            },
+            {
+                "id": 1705010,
+                "type": "half-square-triangle",
+                "topColor": "magenta",
+                "bottomColor": "red",
+                "direction": "top-left"
+            }
+        ],
+        [
+            {
+                "id": 1706001,
+                "type": "half-square-triangle",
+                "topColor": "red",
+                "bottomColor": "orange",
+                "direction": "top-right"
+            },
+            {
+                "id": 1706002,
+                "type": "half-square-triangle",
+                "topColor": "orange",
+                "bottomColor": "yellow",
+                "direction": "top-left"
+            },
+            {
+                "id": 1706003,
+                "type": "half-square-triangle",
+                "topColor": "yellow",
+                "bottomColor": "green",
+                "direction": "top-right"
+            },
+            {
+                "id": 1706004,
+                "type": "half-square-triangle",
+                "topColor": "green",
+                "bottomColor": "blue",
+                "direction": "top-left"
+            },
+            {
+                "id": 1706005,
+                "type": "half-square-triangle",
+                "topColor": "blue",
+                "bottomColor": "purple",
+                "direction": "top-right"
+            },
+            {
+                "id": 1706006,
+                "type": "half-square-triangle",
+                "topColor": "purple",
+                "bottomColor": "black",
+                "direction": "top-left"
+            },
+            {
+                "id": 1706007,
+                "type": "half-square-triangle",
+                "topColor": "black",
+                "bottomColor": "white",
+                "direction": "top-right"
+            },
+            {
+                "id": 1706008,
+                "type": "half-square-triangle",
+                "topColor": "white",
+                "bottomColor": "cyan",
+                "direction": "top-left"
+            },
+            {
+                "id": 1706009,
+                "type": "half-square-triangle",
+                "topColor": "cyan",
+                "bottomColor": "magenta",
+                "direction": "top-right"
+            },
+            {
+                "id": 1706010,
+                "type": "half-square-triangle",
+                "topColor": "magenta",
+                "bottomColor": "red",
+                "direction": "top-left"
+            }
+        ],
+        [
+            {
+                "id": 1707001,
+                "type": "half-square-triangle",
+                "topColor": "red",
+                "bottomColor": "orange",
+                "direction": "top-right"
+            },
+            {
+                "id": 1707002,
+                "type": "half-square-triangle",
+                "topColor": "orange",
+                "bottomColor": "yellow",
+                "direction": "top-left"
+            },
+            {
+                "id": 1707003,
+                "type": "half-square-triangle",
+                "topColor": "yellow",
+                "bottomColor": "green",
+                "direction": "top-right"
+            },
+            {
+                "id": 1707004,
+                "type": "half-square-triangle",
+                "topColor": "green",
+                "bottomColor": "blue",
+                "direction": "top-left"
+            },
+            {
+                "id": 1707005,
+                "type": "half-square-triangle",
+                "topColor": "blue",
+                "bottomColor": "purple",
+                "direction": "top-right"
+            },
+            {
+                "id": 1707006,
+                "type": "half-square-triangle",
+                "topColor": "purple",
+                "bottomColor": "black",
+                "direction": "top-left"
+            },
+            {
+                "id": 1707007,
+                "type": "half-square-triangle",
+                "topColor": "black",
+                "bottomColor": "white",
+                "direction": "top-right"
+            },
+            {
+                "id": 1707008,
+                "type": "half-square-triangle",
+                "topColor": "white",
+                "bottomColor": "cyan",
+                "direction": "top-left"
+            },
+            {
+                "id": 1707009,
+                "type": "half-square-triangle",
+                "topColor": "cyan",
+                "bottomColor": "magenta",
+                "direction": "top-right"
+            },
+            {
+                "id": 1707010,
+                "type": "half-square-triangle",
+                "topColor": "magenta",
+                "bottomColor": "red",
+                "direction": "top-left"
+            }
+        ],
+        [
+            {
+                "id": 1708001,
+                "type": "half-square-triangle",
+                "topColor": "red",
+                "bottomColor": "orange",
+                "direction": "top-right"
+            },
+            {
+                "id": 1708002,
+                "type": "half-square-triangle",
+                "topColor": "orange",
+                "bottomColor": "yellow",
+                "direction": "top-left"
+            },
+            {
+                "id": 1708003,
+                "type": "half-square-triangle",
+                "topColor": "yellow",
+                "bottomColor": "green",
+                "direction": "top-right"
+            },
+            {
+                "id": 1708004,
+                "type": "half-square-triangle",
+                "topColor": "green",
+                "bottomColor": "blue",
+                "direction": "top-left"
+            },
+            {
+                "id": 1708005,
+                "type": "half-square-triangle",
+                "topColor": "blue",
+                "bottomColor": "purple",
+                "direction": "top-right"
+            },
+            {
+                "id": 1708006,
+                "type": "half-square-triangle",
+                "topColor": "purple",
+                "bottomColor": "black",
+                "direction": "top-left"
+            },
+            {
+                "id": 1708007,
+                "type": "half-square-triangle",
+                "topColor": "black",
+                "bottomColor": "white",
+                "direction": "top-right"
+            },
+            {
+                "id": 1708008,
+                "type": "half-square-triangle",
+                "topColor": "white",
+                "bottomColor": "cyan",
+                "direction": "top-left"
+            },
+            {
+                "id": 1708009,
+                "type": "half-square-triangle",
+                "topColor": "cyan",
+                "bottomColor": "magenta",
+                "direction": "top-right"
+            },
+            {
+                "id": 1708010,
+                "type": "half-square-triangle",
+                "topColor": "magenta",
+                "bottomColor": "red",
+                "direction": "top-left"
+            }
+        ],
+        [
+            {
+                "id": 1709001,
+                "type": "half-square-triangle",
+                "topColor": "red",
+                "bottomColor": "orange",
+                "direction": "top-right"
+            },
+            {
+                "id": 1709002,
+                "type": "half-square-triangle",
+                "topColor": "orange",
+                "bottomColor": "yellow",
+                "direction": "top-left"
+            },
+            {
+                "id": 1709003,
+                "type": "half-square-triangle",
+                "topColor": "yellow",
+                "bottomColor": "green",
+                "direction": "top-right"
+            },
+            {
+                "id": 1709004,
+                "type": "half-square-triangle",
+                "topColor": "green",
+                "bottomColor": "blue",
+                "direction": "top-left"
+            },
+            {
+                "id": 1709005,
+                "type": "half-square-triangle",
+                "topColor": "blue",
+                "bottomColor": "purple",
+                "direction": "top-right"
+            },
+            {
+                "id": 1709006,
+                "type": "half-square-triangle",
+                "topColor": "purple",
+                "bottomColor": "black",
+                "direction": "top-left"
+            },
+            {
+                "id": 1709007,
+                "type": "half-square-triangle",
+                "topColor": "black",
+                "bottomColor": "white",
+                "direction": "top-right"
+            },
+            {
+                "id": 1709008,
+                "type": "half-square-triangle",
+                "topColor": "white",
+                "bottomColor": "cyan",
+                "direction": "top-left"
+            },
+            {
+                "id": 1709009,
+                "type": "half-square-triangle",
+                "topColor": "cyan",
+                "bottomColor": "magenta",
+                "direction": "top-right"
+            },
+            {
+                "id": 1709010,
+                "type": "half-square-triangle",
+                "topColor": "magenta",
+                "bottomColor": "red",
+                "direction": "top-left"
+            }
+        ],
+        [
+            {
+                "id": 1710001,
+                "type": "half-square-triangle",
+                "topColor": "red",
+                "bottomColor": "orange",
+                "direction": "top-right"
+            },
+            {
+                "id": 1710002,
+                "type": "half-square-triangle",
+                "topColor": "orange",
+                "bottomColor": "yellow",
+                "direction": "top-left"
+            },
+            {
+                "id": 1710003,
+                "type": "half-square-triangle",
+                "topColor": "yellow",
+                "bottomColor": "green",
+                "direction": "top-right"
+            },
+            {
+                "id": 1710004,
+                "type": "half-square-triangle",
+                "topColor": "green",
+                "bottomColor": "blue",
+                "direction": "top-left"
+            },
+            {
+                "id": 1710005,
+                "type": "half-square-triangle",
+                "topColor": "blue",
+                "bottomColor": "purple",
+                "direction": "top-right"
+            },
+            {
+                "id": 1710006,
+                "type": "half-square-triangle",
+                "topColor": "purple",
+                "bottomColor": "black",
+                "direction": "top-left"
+            },
+            {
+                "id": 1710007,
+                "type": "half-square-triangle",
+                "topColor": "black",
+                "bottomColor": "white",
+                "direction": "top-right"
+            },
+            {
+                "id": 1710008,
+                "type": "half-square-triangle",
+                "topColor": "white",
+                "bottomColor": "cyan",
+                "direction": "top-left"
+            },
+            {
+                "id": 1710009,
+                "type": "half-square-triangle",
+                "topColor": "cyan",
+                "bottomColor": "magenta",
+                "direction": "top-right"
+            },
+            {
+                "id": 1710010,
+                "type": "half-square-triangle",
+                "topColor": "magenta",
+                "bottomColor": "red",
+                "direction": "top-left"
+            }
+        ]
+    ]
+}
